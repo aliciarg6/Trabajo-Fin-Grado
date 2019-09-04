@@ -103,9 +103,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
         if i>3:
             if patrones.formacionConGapBajista(aper1=quotes['Open'][i-4], cierre1=quotes['Close'][i-4], aper2=quotes['Open'][i-3], cierre2=quotes['Close'][i-3], aper3=quotes['Open'][i-2], cierre3=quotes['Close'][i-2], aper4=quotes['Open'][i-1], cierre4=quotes['Close'][i-1], aper5=quotes['Open'][i], cierre5=quotes['Close'][i],
             fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Formación con Gap Bajista")
                 print("Tendencia Bajista (Continuación)")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="fgb"
@@ -121,9 +123,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
 
             if patrones.formacionConGapAlcista(aper1=quotes['Open'][i-4], cierre1=quotes['Close'][i-4], aper2=quotes['Open'][i-3], cierre2=quotes['Close'][i-3], aper3=quotes['Open'][i-2], cierre3=quotes['Close'][i-2], aper4=quotes['Open'][i-1], cierre4=quotes['Close'][i-1], aper5=quotes['Open'][i], cierre5=quotes['Close'][i],
             fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Formación con Gap Alcista")
                 print("Tendencia Alcista (Continuación)")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="fga"
@@ -139,9 +143,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
 
             if patrones.matHold(aper1=quotes['Open'][i-4], cierre1=quotes['Close'][i-4], aper2=quotes['Open'][i-3], cierre2=quotes['Close'][i-3], aper3=quotes['Open'][i-2], cierre3=quotes['Close'][i-2], aper4=quotes['Open'][i-1], cierre4=quotes['Close'][i-1], aper5=quotes['Open'][i], cierre5=quotes['Close'][i],
             fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Mat Hold")
                 print("Tendencia Alcista (Continuación)")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="mh"
@@ -157,9 +163,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
 
             if patrones.tripleFormacionAlcista(aper1=quotes['Open'][i-4], cierre1=quotes['Close'][i-4], aper2=quotes['Open'][i-3], cierre2=quotes['Close'][i-3], aper3=quotes['Open'][i-2], cierre3=quotes['Close'][i-2], aper4=quotes['Open'][i-1], cierre4=quotes['Close'][i-1], aper5=quotes['Open'][i], cierre5=quotes['Close'][i],
             fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia) == True:
+                '''
                 print("Detectada Triple Formacion Alcista")
                 print("Tendencia Alcista (Continuación)")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="tfa"
@@ -175,9 +183,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
 
             if patrones.tripleFormacionBajista(aper1=quotes['Open'][i-4], cierre1=quotes['Close'][i-4], aper2=quotes['Open'][i-3], cierre2=quotes['Close'][i-3], aper3=quotes['Open'][i-2], cierre3=quotes['Close'][i-2], aper4=quotes['Open'][i-1], cierre4=quotes['Close'][i-1], aper5=quotes['Open'][i], cierre5=quotes['Close'][i],
             fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia) == True:
+                '''
                 print("Detectada Triple Formacion Alcista")
                 print("Tendencia Alcista (Continuación)")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="tfb"
@@ -194,9 +204,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
         if i>2 and encontrado==False:
             if patrones.pequeniaGolondrinaOcultada(aper1=quotes['Open'][i-3], cierre1=quotes['Close'][i-3], alto1=quotes['High'][i-3], bajo1=quotes['Low'][i-3], aper2=quotes['Open'][i-2], cierre2=quotes['Close'][i-2], alto2=quotes['High'][i-2], bajo2=quotes['Low'][i-2], aper3=quotes['Open'][i-1], cierre3=quotes['Close'][i-1],
              alto3=quotes['High'][i-1], bajo3=quotes['Low'][i-1], aper4=quotes['Open'][i], cierre4=quotes['Close'][i], alto4=quotes['High'][i], bajo4=quotes['Low'][i],fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia )==True:
+                '''
                 print("Detectada Pequeña Golondrina Oculta: ")
                 print("Tendencia Alcista ")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="pgo"
@@ -212,9 +224,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
 
         if i>1 and encontrado==False:
             if patrones.dosCuervosEnGapAlcista(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], aper3=quotes['Open'][i], cierre3=quotes['Close'][i],  fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Dos Cuervos en Gap Alcista: ")
                 print("Tendencia Bajista ")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="dcga"
@@ -230,9 +244,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
 
             if patrones.tresSoldadosBlancos(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], alto1=quotes['High'][i-2], bajo1=quotes['Low'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], alto2=quotes['High'][i-1], bajo2=quotes['Low'][i-1], aper3=quotes['Open'][i], cierre3=quotes['Close'][i],
             alto3=quotes['High'][i], bajo3=quotes['Low'][i],fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia )==True:
+                '''
                 print("Detectada Tres Soldados Blancos: ")
                 print("Tendencia Alcista ")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="tsb"
@@ -248,9 +264,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
 
             if patrones.tresCuervosNegros(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], alto1=quotes['High'][i-2], bajo1=quotes['Low'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], alto2=quotes['High'][i-1], bajo2=quotes['Low'][i-1], aper3=quotes['Open'][i], cierre3=quotes['Close'][i],
             alto3=quotes['High'][i], bajo3=quotes['Low'][i],fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Tres Cuervos Negros: ")
                 print("Tendencia Alcista ")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="tcn"
@@ -265,9 +283,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
                 plt.axvspan(fechaInt-interNeg, fechaInt+inter, facecolor='springgreen', alpha = 0.7)
 
             if patrones.bebeAbandonadoAlcista(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], aper3=quotes['Open'][i], cierre3=quotes['Close'][i],  fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Bebe Abandonado Alcista: ")
                 print("Tendencia Alcista ")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="baa"
@@ -282,9 +302,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
                 plt.axvspan(fechaInt-interNeg, fechaInt+inter, facecolor='green', alpha = 0.7)
 
             if patrones.bebeAbandonadoBajista(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], aper3=quotes['Open'][i], cierre3=quotes['Close'][i],  fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Bebe Abandonado Bajista: ")
                 print("Tendencia Bajista ")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="bab"
@@ -301,9 +323,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
             #Cambiar color de la sombra
             if patrones.estrellaVespertinaDoji(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], alto1=quotes['High'][i-2], bajo1=quotes['Low'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], alto2=quotes['High'][i-1], bajo2=quotes['Low'][i-1],
             aper3=quotes['Open'][i],cierre3=quotes['Close'][i], alto3=quotes['High'][i], bajo3=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Estrella Vespertina Doji: ")
                 print("Tendencia Bajista ")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="evd"
@@ -320,9 +344,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
             #Cambiar color de la sombra
             if patrones.estrellaDeLaManianaDoji(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], alto1=quotes['High'][i-2], bajo1=quotes['Low'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], alto2=quotes['High'][i-1], bajo2=quotes['Low'][i-1],
             aper3=quotes['Open'][i],cierre3=quotes['Close'][i], alto3=quotes['High'][i], bajo3=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Estrella de la Mañana Doji: ")
                 print("Tendencia Alcista ")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="emd"
@@ -339,9 +365,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
             #Cambiar color de la sombra
             if patrones.estrellaDeLaManiana(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], alto1=quotes['High'][i-2], bajo1=quotes['Low'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], alto2=quotes['High'][i-1], bajo2=quotes['Low'][i-1],
             aper3=quotes['Open'][i],cierre3=quotes['Close'][i], alto3=quotes['High'][i], bajo3=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Estrella de la Mañana: ")
                 print("Tendencia Alcista ")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="em"
@@ -358,9 +386,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
             #Cambiar color de la sombra
             if patrones.estrellaVespertina(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], alto1=quotes['High'][i-2], bajo1=quotes['Low'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], alto2=quotes['High'][i-1], bajo2=quotes['Low'][i-1],
             aper3=quotes['Open'][i],cierre3=quotes['Close'][i], alto3=quotes['High'][i], bajo3=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Estrella Vespertina: ")
                 print("Tendencia Bajista ")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="ev"
@@ -378,8 +408,10 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
 
         if i>0 and encontrado==False:
             if patrones.cozAlcista(aperturaAct=quotes['Open'][i], cierreAct=quotes['Close'][i], aperturaAnt=quotes['Open'][i-1], cierreAnt=quotes['Close'][i-1], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Coz Alcista el día:")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="ca"
@@ -395,8 +427,10 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
 
 
             if patrones.cozBajista(aperturaAct=quotes['Open'][i], cierreAct=quotes['Close'][i], aperturaAnt=quotes['Open'][i-1], cierreAnt=quotes['Close'][i-1], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Coz Bajista el día:")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="cb"
@@ -411,9 +445,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
                 plt.axvspan(fechaInt-interNeg, fechaInt+inter, facecolor='hotpink', alpha = 0.6)
 
             if patrones.ventanaBajista(aper1=quotes['Open'][i-1], cierre1=quotes['Close'][i-1], alto1=quotes['High'][i-1], bajo1=quotes['Low'][i-1], aper2=quotes['Open'][i], cierre2=quotes['Close'][i], alto2=quotes['High'][i], bajo2=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Ventana Bajista: ")
                 print("Tendencia Bajista")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="vb"
@@ -429,9 +465,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
 
 
             if patrones.ventanaAlcita(aper1=quotes['Open'][i-1], cierre1=quotes['Close'][i-1], alto1=quotes['High'][i-1], bajo1=quotes['Low'][i-1], aper2=quotes['Open'][i], cierre2=quotes['Close'][i], alto2=quotes['High'][i], bajo2=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Ventana Alcista: ")
                 print("Tendencia Alcista")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="va"
@@ -445,12 +483,13 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
                 interNeg = datetime.timedelta(days=1.4+delta)
                 plt.axvspan(fechaInt-interNeg, fechaInt+inter, facecolor='purple', alpha = 0.6)
 
-            #Cambiar color de la sombra
             if patrones.envolventeAlcista(aper1=quotes['Open'][i-1], cierre1=quotes['Close'][i-1], alto1=quotes['High'][i-1], bajo1=quotes['Low'][i-1], aper2=quotes['Open'][i], cierre2=quotes['Close'][i], alto2=quotes['High'][i],
              bajo2=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Envolvente Alcista: ")
                 print("Tendencia Alcista")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="ea"
@@ -467,9 +506,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
             #Cambiar color de la sombra
             if patrones.envolventeBajista(aper1=quotes['Open'][i-1], cierre1=quotes['Close'][i-1], alto1=quotes['High'][i-1], bajo1=quotes['Low'][i-1], aper2=quotes['Open'][i], cierre2=quotes['Close'][i], alto2=quotes['High'][i],
              bajo2=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True:
+                '''
                 print("Detectada Envolvente Bajista: ")
                 print("Tendencia Bajista")
                 print(quotes.index[i])
+                '''
                 encontrado=True
                 vela=True
                 nombreVela="eb"
@@ -486,8 +527,10 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
 
 
         if patrones.velaAlcistaGrande(apertura=quotes['Open'][i], cierre=quotes['Close'][i], alto=quotes['High'][i], bajo=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True and encontrado==False:
+            '''
             print("Detectada Vela Alcista Grande el día: ")
             print(quotes.index[i])
+            '''
             fechaInt=quotes.index[i]
             encontrado=True
             vela=True
@@ -497,8 +540,10 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
             inter = datetime.timedelta(days=0.4)
             plt.axvspan(fechaInt-inter, fechaInt+inter, facecolor='g', alpha = 0.5)
         if patrones.velaBajistaGrande(apertura=quotes['Open'][i], cierre=quotes['Close'][i], alto=quotes['High'][i], bajo=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True and encontrado==False:
+            '''
             print("Detectada Vela Bajista Grande el día: ")
             print(quotes.index[i])
+            '''
             encontrado=True
             vela=True
             nombreVela="vbg"
@@ -508,11 +553,12 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
             inter = datetime.timedelta(days=0.4)
             plt.axvspan(fechaInt-inter, fechaInt+inter, facecolor='r', alpha = 0.5)
 
-        #Cambiar color de la sombra
         if patrones.hombreColgado(aper1=quotes['Open'][i], cierre1=quotes['Close'][i], alto1=quotes['High'][i], bajo1=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True and encontrado==False:
+            '''
             print("Detectada Vela Hombre Colgado: ")
             print("Tendencia Bajista")
             print(quotes.index[i])
+            '''
             encontrado=True
             vela=True
             nombreVela="hc"
@@ -524,9 +570,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
 
         #Cambiar color de la sombra
         if patrones.dojiSombrilla(aper1=quotes['Open'][i], cierre1=quotes['Close'][i], alto1=quotes['High'][i], bajo1=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True and encontrado==False:
+            '''
             print("Detectada Vela Doji Sombrilla: ")
             print("Tendencia Alcista")
             print(quotes.index[i])
+            '''
             encontrado=True
             vela=True
             nombreVela="ds"
@@ -539,9 +587,11 @@ def hallarPatrones(fechaInicio, fechaFin, archivo, procedencia, contador):
 
         #Cambiar color de la sombra
         if patrones.dojiSombrillaInvertida(aper1=quotes['Open'][i], cierre1=quotes['Close'][i], alto1=quotes['High'][i], bajo1=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia)==True and encontrado==False:
+            '''
             print("Detectada Vela Doji Sombrilla Invertida: ")
             print("Tendencia Bajista")
             print(quotes.index[i])
+            '''
             encontrado=True
             vela=True
             nombreVela="dsi"

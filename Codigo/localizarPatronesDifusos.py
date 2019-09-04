@@ -70,10 +70,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
         if i>3:
             if round(difuso.formacionConGapBajistaDifusa(aper1=quotes['Open'][i-4], cierre1=quotes['Close'][i-4], aper2=quotes['Open'][i-3], cierre2=quotes['Close'][i-3], aper3=quotes['Open'][i-2], cierre3=quotes['Close'][i-2], aper4=quotes['Open'][i-1], cierre4=quotes['Close'][i-1], aper5=quotes['Open'][i], cierre5=quotes['Close'][i],
             fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Formación con Gap Bajista Difusa")
                 print("Tendencia Bajista (Continuación)")
                 print(quotes.index[i])
-
+                '''
                 vela=True
                 if i<=contador:
                     vela=False
@@ -92,10 +93,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
             if round(difuso.formacionConGapAlcistaDifusa(aper1=quotes['Open'][i-4], cierre1=quotes['Close'][i-4], aper2=quotes['Open'][i-3], cierre2=quotes['Close'][i-3], aper3=quotes['Open'][i-2], cierre3=quotes['Close'][i-2], aper4=quotes['Open'][i-1], cierre4=quotes['Close'][i-1], aper5=quotes['Open'][i], cierre5=quotes['Close'][i],
             fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Formación con Gap Alcista Difusa")
                 print("Tendencia Alcista (Continuación)")
                 print(quotes.index[i])
-
+                '''
                 vela=True
                 if i<=contador:
                     vela=False
@@ -114,9 +116,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
             if round(difuso.matHoldDifusa(aper1=quotes['Open'][i-4], cierre1=quotes['Close'][i-4], aper2=quotes['Open'][i-3], cierre2=quotes['Close'][i-3], aper3=quotes['Open'][i-2], cierre3=quotes['Close'][i-2], aper4=quotes['Open'][i-1], cierre4=quotes['Close'][i-1], aper5=quotes['Open'][i], cierre5=quotes['Close'][i],
             fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Mat Hold Difusa")
                 print("Tendencia Alcista (Continuación)")
                 print(quotes.index[i])
+                '''
                 vela=True
                 if i<=contador:
                     vela=False
@@ -135,10 +139,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
             if round(difuso.tripleFormacionAlcistaDifusa(aper1=quotes['Open'][i-4], cierre1=quotes['Close'][i-4], aper2=quotes['Open'][i-3], cierre2=quotes['Close'][i-3], aper3=quotes['Open'][i-2], cierre3=quotes['Close'][i-2], aper4=quotes['Open'][i-1], cierre4=quotes['Close'][i-1], aper5=quotes['Open'][i], cierre5=quotes['Close'][i],
             fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Triple Formacion Alcista Difusa")
                 print("Tendencia Alcista (Continuación)")
                 print(quotes.index[i])
-
+                '''
                 vela=True
                 if i<=contador:
                     vela=False
@@ -157,9 +162,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
             if round(difuso.tripleFormacionBajistaDifusa(aper1=quotes['Open'][i-4], cierre1=quotes['Close'][i-4], aper2=quotes['Open'][i-3], cierre2=quotes['Close'][i-3], aper3=quotes['Open'][i-2], cierre3=quotes['Close'][i-2], aper4=quotes['Open'][i-1], cierre4=quotes['Close'][i-1], aper5=quotes['Open'][i], cierre5=quotes['Close'][i],
             fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Triple Formacion Alcista Difusa")
                 print("Tendencia Alcista (Continuación)")
                 print(quotes.index[i])
+                '''
                 vela=True
                 if i<=contador:
                     vela=False
@@ -178,10 +185,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
         if i>2:
             if round(difuso.pequeniaGolondrinaOcultadaDifusa(aper1=quotes['Open'][i-3], cierre1=quotes['Close'][i-3], alto1=quotes['High'][i-3], bajo1=quotes['Low'][i-3], aper2=quotes['Open'][i-2], cierre2=quotes['Close'][i-2], alto2=quotes['High'][i-2], bajo2=quotes['Low'][i-2], aper3=quotes['Open'][i-1], cierre3=quotes['Close'][i-1],
              alto3=quotes['High'][i-1], bajo3=quotes['Low'][i-1], aper4=quotes['Open'][i], cierre4=quotes['Close'][i], alto4=quotes['High'][i], bajo4=quotes['Low'][i],fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Pequeña Golondrina Oculta: ")
                 print("Tendencia Alcista ")
                 print(quotes.index[i])
-
+                '''
                 vela=True
                 nombreVela="pgo"
                 if i<=contador:
@@ -201,10 +209,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
         if i>1:
             if round(difuso.dosCuervosEnGapAlcistaDifusa(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], aper3=quotes['Open'][i], cierre3=quotes['Close'][i],  fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Dos Cuervos en Gap Alcista Difusa: ")
                 print("Tendencia Bajista ")
                 print(quotes.index[i])
-
+                '''
                 vela=True
                 nombreVela="dcga"
                 if i<=contador:
@@ -223,9 +232,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
             if round(difuso.tresSoldadosBlancosDifusa(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], alto1=quotes['High'][i-2], bajo1=quotes['Low'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], alto2=quotes['High'][i-1], bajo2=quotes['Low'][i-1], aper3=quotes['Open'][i], cierre3=quotes['Close'][i],
             alto3=quotes['High'][i], bajo3=quotes['Low'][i],fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Tres Soldados Blancos Difusa: ")
                 print("Tendencia Alcista ")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -246,9 +257,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
             if round(difuso.tresCuervosNegrosDifusa(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], alto1=quotes['High'][i-2], bajo1=quotes['Low'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], alto2=quotes['High'][i-1], bajo2=quotes['Low'][i-1], aper3=quotes['Open'][i], cierre3=quotes['Close'][i],
             alto3=quotes['High'][i], bajo3=quotes['Low'][i],fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Tres Cuervos Negros Difusa: ")
                 print("Tendencia Alcista ")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -268,9 +281,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
                     encontrado=True
 
             if round(difuso.bebeAbandonadoAlcistaDifusa(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], aper3=quotes['Open'][i], cierre3=quotes['Close'][i],  fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Bebe Abandonado Alcista Difusa: ")
                 print("Tendencia Alcista ")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -289,9 +304,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
                     encontrado=True
 
             if round(difuso.bebeAbandonadoBajistaDifusa(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], aper3=quotes['Open'][i], cierre3=quotes['Close'][i],  fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Bebe Abandonado Bajista Difusa: ")
                 print("Tendencia Bajista ")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -312,9 +329,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
             #Cambiar color de la sombra
             if round(difuso.estrellaVespertinaDojiDifusa(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], alto1=quotes['High'][i-2], bajo1=quotes['Low'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], alto2=quotes['High'][i-1], bajo2=quotes['Low'][i-1],
             aper3=quotes['Open'][i],cierre3=quotes['Close'][i], alto3=quotes['High'][i], bajo3=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Estrella Vespertina Doji Difusa: ")
                 print("Tendencia Bajista ")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -336,9 +355,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
             #Cambiar color de la sombra
             if round(difuso.estrellaDeLaManianaDojiDifusa(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], alto1=quotes['High'][i-2], bajo1=quotes['Low'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], alto2=quotes['High'][i-1], bajo2=quotes['Low'][i-1],
             aper3=quotes['Open'][i],cierre3=quotes['Close'][i], alto3=quotes['High'][i], bajo3=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Estrella de la Mañana Doji Difusa: ")
                 print("Tendencia Alcista ")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -361,9 +382,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
             if round(difuso.estrellaDeLaManianaDifusa(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], alto1=quotes['High'][i-2], bajo1=quotes['Low'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], alto2=quotes['High'][i-1], bajo2=quotes['Low'][i-1],
             aper3=quotes['Open'][i],cierre3=quotes['Close'][i], alto3=quotes['High'][i], bajo3=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Estrella de la Mañana Difusa: ")
                 print("Tendencia Alcista ")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -386,9 +409,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
             #Cambiar color de la sombra
             if round(difuso.estrellaVespertinaDifusa(aper1=quotes['Open'][i-2], cierre1=quotes['Close'][i-2], alto1=quotes['High'][i-2], bajo1=quotes['Low'][i-2], aper2=quotes['Open'][i-1], cierre2=quotes['Close'][i-1], alto2=quotes['High'][i-1], bajo2=quotes['Low'][i-1],
             aper3=quotes['Open'][i],cierre3=quotes['Close'][i], alto3=quotes['High'][i], bajo3=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Estrella Vespertina Difusa: ")
                 print("Tendencia Bajista ")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -410,8 +435,10 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
         if i>0:
             if round(difuso.cozAlcistaDifusa(aperturaAct=quotes['Open'][i], cierreAct=quotes['Close'][i], aperturaAnt=quotes['Open'][i-1], cierreAnt=quotes['Close'][i-1], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Coz Alcista Difusa el día:")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -431,8 +458,10 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
                     encontrado=True
 
             if round(difuso.cozBajistaDifusa(aperturaAct=quotes['Open'][i], cierreAct=quotes['Close'][i], aperturaAnt=quotes['Open'][i-1], cierreAnt=quotes['Close'][i-1], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Coz Bajista Difusa el día:")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -452,9 +481,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
                     encontrado=True
 
             if round(difuso.ventanaBajistaDifusa(aper1=quotes['Open'][i-1], cierre1=quotes['Close'][i-1], alto1=quotes['High'][i-1], bajo1=quotes['Low'][i-1], aper2=quotes['Open'][i], cierre2=quotes['Close'][i], alto2=quotes['High'][i], bajo2=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Ventana Bajista Difusa: ")
                 print("Tendencia Bajista")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -474,9 +505,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
                     encontrado=True
 
             if round(difuso.ventanaAlcistaDifusa(aper1=quotes['Open'][i-1], cierre1=quotes['Close'][i-1], alto1=quotes['High'][i-1], bajo1=quotes['Low'][i-1], aper2=quotes['Open'][i], cierre2=quotes['Close'][i], alto2=quotes['High'][i], bajo2=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Ventana Alcista Difusa: ")
                 print("Tendencia Alcista")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -497,9 +530,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
             if round(difuso.envolventeAlcistaDifusa(aper1=quotes['Open'][i-1], cierre1=quotes['Close'][i-1], alto1=quotes['High'][i-1], bajo1=quotes['Low'][i-1], aper2=quotes['Open'][i], cierre2=quotes['Close'][i], alto2=quotes['High'][i],
              bajo2=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Envolvente Alcista Difusa: ")
                 print("Tendencia Alcista")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -521,9 +556,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
             if round(difuso.envolventeBajistaDifusa(aper1=quotes['Open'][i-1], cierre1=quotes['Close'][i-1], alto1=quotes['High'][i-1], bajo1=quotes['Low'][i-1], aper2=quotes['Open'][i], cierre2=quotes['Close'][i], alto2=quotes['High'][i],
              bajo2=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0):
+                '''
                 print("Detectada Envolvente Bajista Difusa: ")
                 print("Tendencia Bajista")
                 print(quotes.index[i])
+                '''
 
                 vela=True
 
@@ -546,8 +583,10 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
         #Patrones con una única vela
 
         if round(difuso.velaAlcistaGrandeDifusa(apertura=quotes['Open'][i], cierre=quotes['Close'][i], alto=quotes['High'][i], bajo=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0) and vela==False:
+            '''
             print("Detectada Vela Alcista Grande Difusa el día: ")
             print(quotes.index[i])
+            '''
             fechaInt=quotes.index[i]
 
             vela=True
@@ -563,8 +602,10 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
 
         if round(difuso.velaBajistaGrandeDifusa(apertura=quotes['Open'][i], cierre=quotes['Close'][i], alto=quotes['High'][i], bajo=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0) and vela==False:
+            '''
             print("Detectada Vela Bajista Grande Difusa el día: ")
             print(quotes.index[i])
+            '''
 
             vela=True
             if i<=contador:
@@ -580,9 +621,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
 
         if round(difuso.dojiSombrillaDifusa(aper1=quotes['Open'][i], cierre1=quotes['Close'][i], alto1=quotes['High'][i], bajo1=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0) and vela==False:
+            '''
             print("Detectada Vela Doji Sombrilla Difusa: ")
             print("Tendencia Alcista")
             print(quotes.index[i])
+            '''
 
             vela=True
             if i<=contador:
@@ -599,9 +642,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
 
         #Cambiar color de la sombra
         if round(difuso.dojiSombrillaInvertidaDifusa(aper1=quotes['Open'][i], cierre1=quotes['Close'][i], alto1=quotes['High'][i], bajo1=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0) and vela==False:
+            '''
             print("Detectada Vela Doji Sombrilla Invertida Difusa: ")
             print("Tendencia Bajista")
             print(quotes.index[i])
+            '''
 
             vela=True
             if i<=contador:
@@ -616,9 +661,11 @@ def hallarPatronesDifusos(fechaInicio, fechaFin, archivo, procedencia, contador)
                 encontrado=True
 
         if round(difuso.hombreColgadoDifusa(aper1=quotes['Open'][i], cierre1=quotes['Close'][i], alto1=quotes['High'][i], bajo1=quotes['Low'][i], fechaInicio=fechaInicio, fechaFin=fechaFin, archivo=archivo, procedencia=procedencia),2)>float(0.0) and vela==False:
+            '''
             print("Detectada Vela Hombre Colgado Difusa: ")
             print("Tendencia Bajista")
             print(quotes.index[i])
+            '''
 
             vela=True
             if i<=contador:

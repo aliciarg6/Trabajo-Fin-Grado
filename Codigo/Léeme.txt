@@ -1,0 +1,3 @@
+Descripci—n de c—mo ejecutar la aplicaci—n. 
+
+Ejecutar el archivo: interfaz.py

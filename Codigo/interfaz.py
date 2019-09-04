@@ -1,9 +1,6 @@
 from tkinter import *
 from tkinter import ttk
 from PIL import Image, ImageTk
-import pyautogui
-import calendar
-import time
 import datetime
 import os
 from pandas_datareader import data as pdr     #Obtener archivos desde API Yahoo Finance
@@ -11,7 +8,6 @@ import matplotlib
 matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
 from tkcalendar import Calendar, DateEntry
-import getpass
 from tkinter import messagebox as mb
 import os.path
 
@@ -177,15 +173,6 @@ class Application():
                     self.graf2.configure(image=self.graficospatrones2)
                     self.etiqP4.configure(text=velas.nombreVela(nomVelaPertenencia[2]))
                     self.etiqP5.configure(text="Grado de Pertenencia: "+str(round(pertenencia[2],2)))
-                    print(len(pertenencia))
-                    '''
-                    if len(pertenencia)>3:
-                        for x in range(4, len(pertenencia)+1):
-                            etiqP6 = Label(top, text=velas.nombreVela(nomVelaPertenencia[x-1]))
-                            etiqP6.grid(row=1, column=6)
-                            etiqP7 = Label(top, text="Grado de Pertenencia: "+str(round(pertenencia[x-1],2)))
-                            etiqP7.grid(row=2, column=6)
-                    '''
 
 
 
@@ -313,7 +300,7 @@ class Application():
         top.geometry("500x500")
         top.title("Seleccione una fecha")
         cal = Calendar(top, font="Arial 14", selectmode='day', locale='en_US',
-                   cursor="hand1", year=2019, month=2, day=3)
+                   cursor="hand1", year=2019, month=8, day=5)
         cal.pack(fill="both", expand=True)
         Button(top, text="Seleccionar Fecha Inicio", command=print_sel).pack()
         Button(top, text="Cerrar", command=top.destroy).pack()
@@ -341,7 +328,7 @@ class Application():
         top.geometry("500x500")
         top.title("Seleccione una fecha")
         cal = Calendar(top, font="Arial 14", selectmode='day', locale='en_US',
-                   cursor="hand1", year=2019, month=3, day=18)
+                   cursor="hand1", year=2019, month=9, day=5)
         cal.pack(fill="both", expand=True)
         Button(top, text="Seleccionar Fecha Fin", command=print_sel).pack()
         Button(top, text="Cerrar", command=top.destroy).pack()
